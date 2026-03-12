@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Яка ти пісня Lady Gaga?</title>
+  <meta name="description" content="Серйозний стильний тест: яка ти пісня Lady Gaga?" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="hero" id="heroSection">
+      <div class="hero-box fade-in">
+        <div class="hero-topline">
+          <span class="tag">EDITORIAL QUIZ</span>
+          <span class="tag muted-tag">LADY GAGA</span>
+        </div>
+
+        <h1>Яка ти пісня Lady Gaga?</h1>
+
+        <p class="subtitle">
+          Не поверхневий тест, а більш глибокий психологічний вайб-чек.
+          Він дивиться на твою емоційну інтенсивність, глибину, потребу у свободі,
+          контроль, романтичність, темну естетику, соціальну енергію та спосіб,
+          у який ти переживаєш себе і світ.
+        </p>
+
+        <p class="small-note">
+          Результат не “діагноз”, а дуже добре зібраний емоційно-естетичний портрет.
+        </p>
+
+        <button id="startBtn" class="main-btn" type="button">Почати тест</button>
+      </div>
+    </section>
+
+    <section id="quizSection" class="quiz-section hidden">
+      <div class="quiz-card fade-in">
+        <div class="quiz-header">
+          <div>
+            <p class="mini-label">QUESTION FLOW</p>
+            <span id="progressText">Питання 1 / 10</span>
+          </div>
+
+          <div class="progress-wrap">
+            <div class="progress-bar">
+              <div id="progressFill" class="progress-fill"></div>
+            </div>
+          </div>
+        </div>
+
+        <h2 id="questionText" class="question"></h2>
+        <p id="questionHint" class="question-hint"></p>
+
+        <div id="answersBox" class="answers"></div>
+      </div>
+    </section>
+
+    <section id="resultSection" class="result-section hidden">
+      <div class="result-card fade-in">
+        <div class="result-image-wrap">
+          <img id="resultImage" class="result-image" src="" alt="Результат тесту">
+        </div>
+
+        <div class="result-content">
+          <p class="result-label">Твоя пісня</p>
+          <h2 id="resultTitle"></h2>
+          <p id="resultSong" class="result-song"></p>
+          <p id="resultDescription" class="result-description"></p>
+
+          <div class="result-why">
+            <h3>Чому саме ця пісня</h3>
+            <p id="resultWhyText"></p>
+          </div>
+
+          <div class="music-box">
+            <div class="music-box-top">
+              <div>
+                <p class="music-label">СЛУХАТИ СВІЙ РЕЗУЛЬТАТ</p>
+                <h3 id="audioTitle">Твій трек</h3>
+              </div>
+              <span class="music-status" id="musicStatus">Готово до відтворення</span>
+            </div>
+
+            <div class="mini-player">
+              <div class="mini-player-cover-wrap">
+                <img id="playerCover" class="mini-player-cover" src="" alt="Обкладинка треку">
+              </div>
+
+              <div class="mini-player-main">
+                <div class="mini-player-meta">
+                  <p id="playerSongName" class="mini-player-title">Song title</p>
+                  <p class="mini-player-artist">Lady Gaga</p>
+                </div>
+
+                <div class="mini-player-controls">
+                  <button
+                    id="playPauseBtn"
+                    class="icon-btn"
+                    type="button"
+                    aria-label="Play or pause"
+                    data-icon="▶"
+                  ></button>
+
+                  <button
+                    id="restartTrackBtn"
+                    class="icon-btn ghost-icon-btn"
+                    type="button"
+                    aria-label="Restart track"
+                    data-icon="↺"
+                  ></button>
+                </div>
+
+                <div class="time-row">
+                  <span id="currentTime">0:00</span>
+
+                  <div class="progress-click-area" id="progressArea" aria-label="Прогрес треку">
+                    <div class="player-progress">
+                      <div id="playerProgressFill" class="player-progress-fill"></div>
+                    </div>
+                  </div>
+
+                  <span id="durationTime">0:00</span>
+                </div>
+              </div>
+            </div>
+
+            <audio id="resultAudio" preload="metadata">
+              <source id="resultAudioSource" src="" type="audio/mpeg">
+              Ваш браузер не підтримує аудіо.
+            </audio>
+          </div>
+
+          <div class="share-box" id="shareTextBox"></div>
+
+          <div class="result-buttons">
+            <button id="restartBtn" class="main-btn" type="button">Пройти ще раз</button>
+            <button id="copyBtn" class="main-btn ghost-btn" type="button">Скопіювати результат</button>
+            <button id="shareBtn" class="main-btn ghost-btn" type="button">Поширити</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
